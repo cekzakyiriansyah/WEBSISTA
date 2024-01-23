@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Login Form</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            // Mendapatkan nilai username dan password dari formulir
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Lakukan verifikasi login sesuai kebutuhan Anda
+            // Misalnya, Anda dapat menggunakan AJAX untuk memeriksa ke database atau API backend
+
+            // Contoh sederhana: jika username dan password sesuai, tampilkan pesan berhasil
+            if (username === 'user' && password === 'pass') {
+                alert('Login berhasil!');
+                window.location.href = 'index.html'
+            } else {
+                alert('Login gagal. Periksa kembali username dan password.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
